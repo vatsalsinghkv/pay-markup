@@ -1,0 +1,15 @@
+.hero {
+  height: 80rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  // &__heading {
+  //   margin-top: 17.5rem;
+  // }
+
+  &__sub-heading {
+    margin-top: 2.5rem;
+  }
+}

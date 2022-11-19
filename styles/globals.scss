@@ -1,0 +1,38 @@
+@use 'sass:math';
+@use './abstract/variables' as *;
+@use './base';
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap');
+
+:root {
+  // CONSTANT COLOR VARIABLES
+  --color-primary: #{$color-primary};
+  --color-primary-light: #{$color-primary-light};
+  --color-secondary: #{$color-secondary};
+  --color-secondary-light: #{$color-secondary-light};
+  --color-white: #{$color-white};
+  --color-grey: #{$color-grey};
+  --color-bg: #{$color-black};
+  --color-text: #{$color-text};
+  --color-dark: #{$color-dark};
+  --max-width: #{$max-width};
+}
+
+html {
+  // Converting 10px into percentage %
+  font-size: math.div(100, 16) * 10%;
+  //62.5% = 10px
+  // font-size: 10px;
+}
+
+body {
+  font: $font-weight $font-size $font-primary;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+.app {
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}

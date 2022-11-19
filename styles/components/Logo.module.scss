@@ -1,0 +1,6 @@
+@use "../abstract/mixins" as *;
+
+.logo {
+  @include flexCenter;
+  font-size: 3.6rem;
+}

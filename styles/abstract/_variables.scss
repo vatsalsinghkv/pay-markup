@@ -1,0 +1,32 @@
+@use 'sass:math';
+
+// COLORS
+
+$color-primary: #9945ff;
+$color-primary-light: #ff5c85;
+$color-secondary: #06b6d4;
+$color-secondary-light: #22d3ee;
+$color-delete: #ff3366;
+$color-text: #fff;
+$color-light: #f3f3f4;
+$color-grey: #c4c4c4;
+$color-dark: #18151a;
+$color-white: #fff;
+$color-black: #000;
+
+// FONTS
+$font-primary: 'Inter', sans-serif;
+$font-size: 1.6rem;
+$font-weight: 400;
+// $line-height: 1.77;
+
+$max-width: 1180px;
+
+// BREAK POINTS
+// $*-sm: break points are customizable according to the design
+$lg: math.div(1200, 16) * 1em; // LAPTOP
+$lg-sm: math.div(1024, 16) * 1em;
+$md: math.div(768, 16) * 1em; // TABLET
+$md-sm: math.div(480, 16) * 1em;
+$sm: math.div(375, 16) * 1em; // MOBILE
+$sm-sm: math.div(320, 16) * 1em;
