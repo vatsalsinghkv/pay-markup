@@ -23,7 +23,7 @@ const products = [
   },
   {
     id: 'p5',
-    name: "Levi's Men's 512 Slim Tapered Fit Jeans",
+    name: "Levi's Tapered Fit Jeans",
     price: 2515,
     description:
       "Levi's 512™ Taper Jeans strike the perfect balance between skinny and tapered. A go-to for every occasion, it has a slimmer leg than the Levi's 511™ with a tailor-inspired cut that highlights whatever shoes you choose to wear and the right amount of stretch for all-day comfort.",

@@ -17,7 +17,15 @@
     margin-bottom: 2rem;
   }
 
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__price {
+    font-size: 2rem;
+    font-weight: bold;
   }
 
   &__btn {
