@@ -11,7 +11,7 @@ const SendSolModule = ({ price }: { price: number }) => {
   return (
     show && (
       <Modal className={styles['modal']} onClose={close}>
-        <h1>Trying</h1>
+        <h1 className="h-l">Checkout</h1>
         <SendSolForm price={price} address={WALLET_ADDRESS} />
       </Modal>
     )

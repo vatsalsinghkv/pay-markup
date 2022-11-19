@@ -6,6 +6,7 @@
   justify-content: center;
   padding: 20px calc((100% - var(--max-width)) / 2);
   position: relative;
+  margin: 0 5%;
 
   // * When toggler is pressed
   &.active &__background {
@@ -43,7 +44,7 @@
 
     @media only screen and (max-width: $md) {
       background-color: var(--color-white);
-      color: var(--color-text);
+      color: var(--color-black);
       box-shadow: 0 0.5rem 5rem rgba(#000, 0.3);
 
       position: absolute;
@@ -92,7 +93,6 @@
       }
 
       color: var(--color-grey);
-      // font-weight: bold;
       text-decoration: none;
       transition: all 0.2s;
 
