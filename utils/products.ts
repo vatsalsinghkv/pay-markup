@@ -42,8 +42,7 @@ const products = [
     name: 'OnePlus 80 cm (32 inches) Y Series HD Ready LED Smart Android TV 32Y1 (Black)',
     price: 13999,
     description:
-      'Resolution: HD Ready (1366x768) | Refresh Rate: 60 hertz Connectivity: 2 HDMI ports to connect set top box, Blu Ray players, gaming console | 2 USB ports to connect hard drives and other USB devices, Dimensions(TV With Stand) - 71.3cm*20cm*46.9cm, VESA Hole Pitch - 20cm*20cm Sound : 20 Watts Output | Dolby Audio Smart TV Features: Android TV 9.0 | OnePlus Connect | Google Assistant | Play Store | Chromecast | Shared Album | Supported Apps : Netflix, YouTube, Prime video' |
-      ' Content Calendar | OxygenPlay',
+      "Resolution: HD Ready (1366x768) | Refresh Rate: 60 hertz Connectivity: 2 HDMI ports to connect set top box, Blu Ray players, gaming console | 2 USB ports to connect hard drives and other USB devices, Dimensions(TV With Stand) - 71.3cm*20cm*46.9cm, VESA Hole Pitch - 20cm*20cm Sound : 20 Watts Output | Dolby Audio Smart TV Features: Android TV 9.0 | OnePlus Connect | Google Assistant | Play Store | Chromecast | Shared Album | Supported Apps : Netflix, YouTube, Prime video' |  ' Content Calendar | OxygenPlay",
     img: 'https://m.media-amazon.com/images/I/71d5fMDvq9L._SX522_.jpg',
   },
   {

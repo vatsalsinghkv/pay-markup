@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { useState } from 'react';
 import Button from '../../components/Button';
-import styles from './index.module.scss';
 import Logo from '../../components/Logo';
 import Image from 'next/image';
 import { getId } from '../../utils/helper';
+import styles from './index.module.scss';
 
 const NavLink = ({ name, href }) => {
   return (
@@ -19,7 +19,8 @@ const NavLink = ({ name, href }) => {
 function Nav() {
   const [collapsed, setCollapsed] = useState(false);
 
-  const links = ['Product', 'company'];
+  const links = ['products', 'about', 'contact'];
+
   return (
     <nav className={`${styles.navbar} ${collapsed ? styles['active'] : ''}`} role="navigation">
       <Logo className={`${styles['navbar__logo']}`}>PayMarkup</Logo>

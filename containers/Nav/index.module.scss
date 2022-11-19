@@ -84,7 +84,7 @@
     &:visited {
       cursor: pointer;
       user-select: none;
-
+      text-transform: capitalize;
       display: inline-block;
       padding: 1.5rem 1rem;
       &:not(:last-child) {

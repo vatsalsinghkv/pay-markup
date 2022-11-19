@@ -1,4 +1,4 @@
-@use '../../sass/abstract/mixins' as *;
+@use '../../styles/abstract/mixins' as *;
 
 .modal {
   position: fixed;
@@ -11,6 +11,7 @@
   background: var(--color-white);
   border-radius: 6px;
   z-index: 100;
+  color: var(--color-dark) !important;
 
   display: flex;
   flex-direction: column;
@@ -27,7 +28,7 @@
       display: block;
     }
 
-    color: var(--color-grey-1);
+    color: var(--color-grey);
     transition: all 0.3s;
 
     &:hover {

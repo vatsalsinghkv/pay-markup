@@ -1,4 +1,4 @@
-export const trimText = (text, limit = 60) => (text.length > limit ? `${text.substring(0, limit)}...` : text);
+export const trimText = (text: string, limit = 60) => (text.length > limit ? `${text.substring(0, limit)}...` : text);
 
 /**
  * Returns a unique id

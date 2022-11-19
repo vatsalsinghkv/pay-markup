@@ -2,8 +2,9 @@ import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 import * as web3 from '@solana/web3.js';
 import { LAMPORTS_PER_SOL } from '@solana/web3.js';
 import { FC, useState } from 'react';
+import Button from './Button';
 
-export const SendSolForm: FC = () => {
+export const SendSolForm = ({ price, address }: { price: number; address: string }) => {
   const [txSig, setTxSig] = useState('');
   const { connection } = useConnection();
   const { publicKey, sendTransaction } = useWallet();
@@ -11,18 +12,18 @@ export const SendSolForm: FC = () => {
     return txSig ? `https://explorer.solana.com/tx/${txSig}?cluster=devnet` : '';
   };
 
-  const sendSol = (event) => {
-    event.preventDefault();
+  const sendSol = (e) => {
+    e.preventDefault();
     if (!connection || !publicKey) {
       return;
     }
     const transaction = new web3.Transaction();
-    const recipientPubKey = new web3.PublicKey(event.target.recipient.value);
+    const recipientPubKey = new web3.PublicKey(address);
 
     const sendSolInstruction = web3.SystemProgram.transfer({
       fromPubkey: publicKey,
       toPubkey: recipientPubKey,
-      lamports: LAMPORTS_PER_SOL * event.target.amount.value,
+      lamports: LAMPORTS_PER_SOL * price,
     });
 
     transaction.add(sendSolInstruction);
@@ -35,12 +36,8 @@ export const SendSolForm: FC = () => {
     <div>
       {publicKey ? (
         <form onSubmit={sendSol}>
-          <label htmlFor="amount">Amount (in SOL) to send:</label>
-          <input id="amount" type="text" placeholder="e.g. 0.1" required />
-          <br />
-          <label htmlFor="recipient">Send SOL to:</label>
-          <input id="recipient" type="text" placeholder="e.g. 4Zw1fXuYuJhWhu9KLEYMhiPEiqcpKd6akw3WRZCv84HA" required />
-          <button type="submit">Send</button>
+          <p className="info">Total Amount: {price} sol</p>
+          <Button type="submit">Pay</Button>
         </form>
       ) : (
         <span>Connect Your Wallet</span>

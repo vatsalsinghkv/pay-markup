@@ -2,11 +2,11 @@ import Card from '../Card';
 import Button from '../Button';
 import { trimText } from '../../utils/helper';
 import styles from './index.module.scss';
-import { useState } from 'react';
-import { SendSolForm } from '../SendSolForm';
+import { useContext, useState } from 'react';
+import ShowFormModalContext from '../../context/show-form';
 
 const Product = ({ name, price, description, img }) => {
-  const [clicked, setClicked] = useState(false);
+  const { open } = useContext(ShowFormModalContext);
   return (
     <Card className={styles['product']}>
       <img className={styles['product__img']} src={img} alt={name} />
@@ -14,10 +14,9 @@ const Product = ({ name, price, description, img }) => {
         <h3 className={`${styles['product__name']} h-m`}>{name}</h3>
         <p className={styles['product__desc']}>{trimText(`${description}`)}</p>
         <p className={styles['product__price']}>{price}</p>
-        <Button className={styles['product__btn']} onClick={() => setClicked(true)}>
+        <Button className={styles['product__btn']} onClick={() => open(+price)}>
           Buy Now
         </Button>
-        {clicked && <SendSolForm />}
       </div>
     </Card>
   );

@@ -1,0 +1,1 @@
+export const WALLET_ADDRESS = '67NLmpqWaqdFWXhmgt6FU56B9hL4p6HvCVNs9cvZUy2M';
